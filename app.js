@@ -1,5 +1,13 @@
+const gameData = [
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0],
+];
+
 let editedPlayer = 0;
 let activePlayer = 0;
+let currentRound = 0;
+let gameIsOver = false;
 
 const players = [
     {
@@ -9,7 +17,7 @@ const players = [
     {
         name: '',
         symbol: 'O'
-    }
+    },
 ];
 
 const playerConfigOverlayElement = document.getElementById('config-overlay');
@@ -25,6 +33,7 @@ const cancelConfigBtnElement = document.getElementById('cancel-config-btn');
 const startNewGameBtnElement = document.getElementById('start-game-btn');
 // const gameFieldElements = document.querySelectorAll('#game-board li');
 const gameBoradElement = document.getElementById('game-board');
+const gameOverElement = document.getElementById('game-over');
 
 editPlayer1BtnElement.addEventListener('click', openPlayerConfig);
 editPlayer2BtnElement.addEventListener('click', openPlayerConfig);
